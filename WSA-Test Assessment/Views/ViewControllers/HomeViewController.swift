@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
         segmentedControl.selectedSegmentIndex = selectedIndex
         segmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
-            NSAttributedString.Key.foregroundColor : UIColor.black
+            NSAttributedString.Key.foregroundColor : UIColor.textColor
         ], for: .normal)
 
         segmentedControl.setTitleTextAttributes([
@@ -65,6 +65,8 @@ class HomeViewController: UIViewController {
     }
     
     func fetchFoods() {
+        foods = []
+        tableView.reloadData()
         guard let url = URL(string: "https://foodpets.madskill.ru/food?filter=\(type.rawValue)") else {
             print("URL is not valid")
             return
@@ -100,6 +102,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FoodTableViewCell", for: indexPath) as! FoodTableViewCell
             let cellData = foods[indexPath.row]
             cell.fillCell(with: cellData)
+            cell.selectionStyle = .none
             return cell
         } else {
             return UITableViewCell()

@@ -11,4 +11,6 @@ extension UIColor {
     static let imageBlue = UIColor(named: "imageBlue")!
     static let primaryBlue = UIColor(named: "primaryBlue")!
     static let primaryGray = UIColor(named: "primaryGray")!
+    static let textColor = UIColor(named: "textColor")!
+    static let borderColor = UIColor(named: "borderColor")!
 }

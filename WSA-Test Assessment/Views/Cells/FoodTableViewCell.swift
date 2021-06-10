@@ -18,7 +18,7 @@ class FoodTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         foodImageView.layer.borderWidth = 1
-        foodImageView.layer.borderColor = UIColor.black.cgColor
+        foodImageView.layer.borderColor = UIColor.borderColor.cgColor
         foodImageView.layer.cornerRadius = 12
         fetchIamge(with: "")
     }
