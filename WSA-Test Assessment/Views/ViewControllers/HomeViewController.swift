@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
 
         segmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
-            NSAttributedString.Key.foregroundColor : UIColor.white
+            NSAttributedString.Key.foregroundColor : UIColor.selectedTextColor
         ], for: .selected)
         
         if #available(iOS 13.0, *) {
