@@ -14,6 +14,10 @@
 		F5E1379A267206D300C33933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E13799267206D300C33933 /* Assets.xcassets */; };
 		F5E1379D267206D300C33933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E1379B267206D300C33933 /* LaunchScreen.storyboard */; };
 		F5E137A62672076B00C33933 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F5E137A52672076B00C33933 /* Kingfisher */; };
+		F5E137A82672109400C33933 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E137A72672109400C33933 /* UIColor.swift */; };
+		F5E137AA26721B0C00C33933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E137A926721B0C00C33933 /* HomeViewController.swift */; };
+		F5E137B126721E1100C33933 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E137B026721E1100C33933 /* FoodTableViewCell.swift */; };
+		F5E137B426721F3B00C33933 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E137B326721F3B00C33933 /* FoodData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		F5E13799267206D300C33933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5E1379C267206D300C33933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5E1379E267206D300C33933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E137A72672109400C33933 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F5E137A926721B0C00C33933 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F5E137B026721E1100C33933 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		F5E137B326721F3B00C33933 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +68,65 @@
 			children = (
 				F5E13790267206D100C33933 /* AppDelegate.swift */,
 				F5E13792267206D100C33933 /* SceneDelegate.swift */,
-				F5E13794267206D100C33933 /* ViewController.swift */,
-				F5E13796267206D100C33933 /* Main.storyboard */,
+				F5E137B226721F2D00C33933 /* Models */,
+				F5E137AB26721B1400C33933 /* Extensions */,
+				F5E137AE26721D0300C33933 /* Views */,
 				F5E13799267206D300C33933 /* Assets.xcassets */,
 				F5E1379B267206D300C33933 /* LaunchScreen.storyboard */,
 				F5E1379E267206D300C33933 /* Info.plist */,
 			);
 			path = "WSA-Test Assessment";
+			sourceTree = "<group>";
+		};
+		F5E137AB26721B1400C33933 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5E137A72672109400C33933 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5E137AC26721B1D00C33933 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5E13794267206D100C33933 /* ViewController.swift */,
+				F5E137A926721B0C00C33933 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F5E137AD26721B2500C33933 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F5E13796267206D100C33933 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5E137AE26721D0300C33933 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5E137AC26721B1D00C33933 /* ViewControllers */,
+				F5E137AF26721D0A00C33933 /* Cells */,
+				F5E137AD26721B2500C33933 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5E137AF26721D0A00C33933 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F5E137B026721E1100C33933 /* FoodTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F5E137B226721F2D00C33933 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5E137B326721F3B00C33933 /* FoodData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E137B426721F3B00C33933 /* FoodData.swift in Sources */,
+				F5E137AA26721B0C00C33933 /* HomeViewController.swift in Sources */,
 				F5E13795267206D100C33933 /* ViewController.swift in Sources */,
+				F5E137A82672109400C33933 /* UIColor.swift in Sources */,
 				F5E13791267206D100C33933 /* AppDelegate.swift in Sources */,
 				F5E13793267206D100C33933 /* SceneDelegate.swift in Sources */,
+				F5E137B126721E1100C33933 /* FoodTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
