@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		F5E13798267206D100C33933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E13796267206D100C33933 /* Main.storyboard */; };
 		F5E1379A267206D300C33933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E13799267206D300C33933 /* Assets.xcassets */; };
 		F5E1379D267206D300C33933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E1379B267206D300C33933 /* LaunchScreen.storyboard */; };
+		F5E137A62672076B00C33933 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F5E137A52672076B00C33933 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E137A62672076B00C33933 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "WSA-Test Assessment";
+			packageProductDependencies = (
+				F5E137A52672076B00C33933 /* Kingfisher */,
+			);
 			productName = "WSA-Test Assessment";
 			productReference = F5E1378D267206D100C33933 /* WSA-Test Assessment.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +115,9 @@
 				Base,
 			);
 			mainGroup = F5E13784267206D100C33933;
+			packageReferences = (
+				F5E137A42672076B00C33933 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F5E1378E267206D100C33933 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYY68H4963;
 				INFOPLIST_FILE = "WSA-Test Assessment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYY68H4963;
 				INFOPLIST_FILE = "WSA-Test Assessment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5E137A42672076B00C33933 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5E137A52672076B00C33933 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5E137A42672076B00C33933 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5E13785267206D100C33933 /* Project object */;
 }
