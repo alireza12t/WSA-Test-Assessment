@@ -55,7 +55,10 @@ class FoodTableViewCell: UITableViewCell {
         self.foodBrandNameLabel.text = foodData.BrandName
         self.foodNameLabel.text = foodData.FoodName
         if let price = Int(foodData.price) {
-            self.foodPriceLabel.text = String(format: "%09.2f", price) + " $"
+            let formatter = NumberFormatter()
+            formatter.minimumFractionDigits = 2
+            formatter.maximumFractionDigits = 2
+            self.foodPriceLabel.text = (formatter.string(from: NSNumber(integerLiteral: price)) ?? "0.00") + " $"
         } else {
             self.foodPriceLabel.text = foodData.price + " $"
         }
