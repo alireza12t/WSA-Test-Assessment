@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LC2-mi-Jq4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="03j-QO-KT3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -155,22 +155,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vQ-tL-iu2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="562" y="832"/>
-        </scene>
-        <!--Pet Food-->
-        <scene sceneID="G5l-MZ-ozS">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EU5-zq-SBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController title="Pet Food" id="LC2-mi-Jq4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LZJ-Hj-xtY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="03j-QO-KT3" kind="relationship" relationship="rootViewController" id="WuT-nR-GIK"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="403" y="25"/>
         </scene>
         <!--Pet Food-->
         <scene sceneID="R5a-F2-gFN">

@@ -17,9 +17,9 @@ class FoodTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        foodImageView.layer.cornerRadius = 12
-        foodImageView.layer.borderWidth = 0.5
+        foodImageView.layer.borderWidth = 1
         foodImageView.layer.borderColor = UIColor.black.cgColor
+        foodImageView.layer.cornerRadius = 12
         fetchIamge(with: "")
     }
     
@@ -27,12 +27,13 @@ class FoodTableViewCell: UITableViewCell {
         if imageUrl.isEmpty {
             setEmptyImage()
         } else {
-            if let url = URL(string: imageUrl) {
+            if let url = URL(string: "https://foodpets.madskill.ru/up/images/\(imageUrl)") {
                 foodImageView.kf.setImage(with: url, placeholder: UIImage(named: "image")!) { [weak self] (result) in
                     guard let self = self else { return }
                     switch result {
                     case .success(_ ):
-                        break
+                        self.foodImageView.contentMode = .scaleAspectFill
+                        self.foodImageView.backgroundColor = .clear
                     case .failure(_ ):
                         self.setEmptyImage()
                     }
