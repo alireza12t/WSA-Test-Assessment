@@ -35,6 +35,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         configureSegmentedControl(segmentedControl: self.typeSegmentedControl, selectedIndex: 1)
+        self.typeSegmentedControl.setTitle("\(Animaltype.Dogs) (0)", forSegmentAt: 1)
+        self.typeSegmentedControl.setTitle("\(Animaltype.Cats) (0)", forSegmentAt: 0)
+
         fetchFoods()
     }
     
@@ -48,7 +51,7 @@ class HomeViewController: UIViewController {
     func configureSegmentedControl(segmentedControl: UISegmentedControl, selectedIndex: Int) {
         segmentedControl.selectedSegmentIndex = selectedIndex
         segmentedControl.layer.borderColor = UIColor.black.cgColor
-        segmentedControl.layer.borderWidth = 0.5
+        segmentedControl.layer.borderWidth = 1
         segmentedControl.layer.cornerRadius = 6
         segmentedControl.layer.masksToBounds = true
         segmentedControl.setTitleTextAttributes([
