@@ -8,7 +8,7 @@
 import UIKit
 
 enum Animaltype: String {
-    case cats, dogs
+    case Cats, Dogs
 }
 
 class HomeViewController: UIViewController {
@@ -19,17 +19,17 @@ class HomeViewController: UIViewController {
     @IBAction func typeSegmentedCoontrolValueDidChange(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            self.type = .cats
+            self.type = .Cats
         case 1:
-            self.type = .dogs
+            self.type = .Dogs
         default:
-            self.type = .dogs
+            self.type = .Dogs
         }
         fetchFoods()
     }
     
     var foods: [FoodData] = []
-    var type: Animaltype = .dogs
+    var type: Animaltype = .Dogs
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,10 @@ class HomeViewController: UIViewController {
     
     func configureSegmentedControl(segmentedControl: UISegmentedControl, selectedIndex: Int) {
         segmentedControl.selectedSegmentIndex = selectedIndex
+        segmentedControl.layer.borderColor = UIColor.black.cgColor
+        segmentedControl.layer.borderWidth = 0.5
+        segmentedControl.layer.cornerRadius = 6
+        segmentedControl.layer.masksToBounds = true
         segmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
             NSAttributedString.Key.foregroundColor : UIColor.textColor
@@ -67,7 +71,7 @@ class HomeViewController: UIViewController {
     func fetchFoods() {
         foods = []
         tableView.reloadData()
-        guard let url = URL(string: "https://foodpets.madskill.ru/food?filter=\(type.rawValue)") else {
+        guard let url = URL(string: "https://foodpets.madskill.ru/food?filter=\(type.rawValue.lowercased())") else {
             print("URL is not valid")
             return
         }
@@ -82,6 +86,7 @@ class HomeViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.foods = foodData
                     self.tableView.reloadData()
+                    self.typeSegmentedControl.setTitle("\(self.type.rawValue) (\(self.foods.count))", forSegmentAt: self.typeSegmentedControl.selectedSegmentIndex)
                 }
             } catch let error {
                 print("\(error)")

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="03j-QO-KT3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="171-dO-1TQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,10 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="fo7-3E-lh9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-2g-7AO">
+                                <rect key="frame" x="178.5" y="440.5" width="57" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bs8-tH-rDu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Smn-2g-7AO" firstAttribute="centerX" secondItem="Bs8-tH-rDu" secondAttribute="centerX" id="VX4-py-olm"/>
+                            <constraint firstItem="Smn-2g-7AO" firstAttribute="centerY" secondItem="Bs8-tH-rDu" secondAttribute="centerY" id="bDZ-vr-XT2"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" selectedImage="search" id="zz4-bD-XdN"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="search" selectedImage="search" id="zz4-bD-XdN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iP9-8C-4oR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,10 +45,22 @@
                     <view key="view" contentMode="scaleToFill" id="AV5-Cz-8EY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-85-TN9">
+                                <rect key="frame" x="182" y="440.5" width="50" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tK4-wd-ZCd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L1h-85-TN9" firstAttribute="centerY" secondItem="tK4-wd-ZCd" secondAttribute="centerY" id="41v-h1-PrR"/>
+                            <constraint firstItem="L1h-85-TN9" firstAttribute="centerX" secondItem="tK4-wd-ZCd" secondAttribute="centerX" id="A2v-11-FNJ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="profile" id="yAE-w9-BOF"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile" id="yAE-w9-BOF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flh-Po-JfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="77g-4T-ry0">
-                                <rect key="frame" x="16" y="70" width="382" height="33"/>
+                                <rect key="frame" x="16" y="112" width="382" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="NdQ-jC-aqH"/>
                                 </constraints>
@@ -66,7 +90,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZQl-PW-0oD">
-                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodTableViewCell" id="jd7-Hl-hut" customClass="FoodTableViewCell" customModule="WSA_Test_Assessment" customModuleProvider="target">
@@ -139,12 +163,12 @@
                             <constraint firstItem="77g-4T-ry0" firstAttribute="leading" secondItem="8fP-db-XQV" secondAttribute="leading" constant="16" id="Q8S-D5-RV8"/>
                             <constraint firstItem="ZQl-PW-0oD" firstAttribute="top" secondItem="77g-4T-ry0" secondAttribute="bottom" constant="30" id="Sn3-Dr-rPS"/>
                             <constraint firstItem="8fP-db-XQV" firstAttribute="trailing" secondItem="ZQl-PW-0oD" secondAttribute="trailing" id="XwJ-xt-DAA"/>
-                            <constraint firstItem="77g-4T-ry0" firstAttribute="top" secondItem="RmP-4K-7gS" secondAttribute="top" constant="70" id="evJ-e1-Fp5"/>
+                            <constraint firstItem="77g-4T-ry0" firstAttribute="top" secondItem="8fP-db-XQV" secondAttribute="top" constant="24" id="k5f-v9-W5z"/>
                             <constraint firstItem="8fP-db-XQV" firstAttribute="trailing" secondItem="77g-4T-ry0" secondAttribute="trailing" constant="16" id="oCV-NM-gEb"/>
                             <constraint firstItem="ZQl-PW-0oD" firstAttribute="leading" secondItem="8fP-db-XQV" secondAttribute="leading" id="wnN-6E-WMB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="home" id="Zex-92-tWv">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="Zex-92-tWv">
                         <color key="badgeColor" name="primaryBlue"/>
                     </tabBarItem>
                     <connections>
@@ -156,11 +180,30 @@
             </objects>
             <point key="canvasLocation" x="562" y="832"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fCQ-Gm-rpN">
+            <objects>
+                <navigationController id="171-dO-1TQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NN6-Vk-tgM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="03j-QO-KT3" kind="relationship" relationship="rootViewController" id="OzM-wa-ed0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bde-qh-vsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="25"/>
+        </scene>
         <!--Pet Food-->
         <scene sceneID="R5a-F2-gFN">
             <objects>
-                <tabBarController title="Pet Food" id="03j-QO-KT3" customClass="TabBarController" customModule="WSA_Test_Assessment" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4wP-jp-FGS"/>
+                <tabBarController title="Pet Food" id="03j-QO-KT3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Pet Food" id="4wP-jp-FGS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UcV-fd-b5m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
